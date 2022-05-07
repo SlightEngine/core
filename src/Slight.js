@@ -1,8 +1,9 @@
-import Engine from './core/SlightEngine';
+import Engine from './core/SlightEngine.js';
 
-
-const Slight = {
-  Engine: Engine
+export {
+  Engine
 }
 
-export default Slight;
+export default {
+  Engine: Engine
+}
