@@ -1,8 +1,7 @@
 
 export default class Engine {
   constructor(canvas = document.createElement('canvas'), {
-    // width,
-    // height,
+
     fullScreen = true,
 
     webgl = 2,
@@ -19,17 +18,15 @@ export default class Engine {
     xrCompatible = false
   } = {}) {
 
-    const attributes = {alpha}
+    const attributes = { alpha, antialias, depth, desynchronized, failIfMajorPerformanceCaveat, powerPreference, premultipliedAlpha, preserveDrawingBuffer, stencil, xrCompatible };
+    
 
-    // console.log(canvas);
-
-    if (webgl === 2) this.gl = canvas.getContext('webgl2' /*, attributes*/);
+    if (webgl === 2) this.gl = canvas.getContext('webgl2', attributes);
     this.isWebgl2 = !!this.gl;
 
-    if (!this.gl) this.gl = canvas.getContext('webgl', /*attributes*/);
+    if (!this.gl) this.gl = canvas.getContext('webgl', attributes);
     if (!this.gl) console.error('webgl is not supported');
 
-    // console.log(this.gl.getContextAttributes());
-
+    
   }
 }
