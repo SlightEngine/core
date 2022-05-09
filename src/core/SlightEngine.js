@@ -21,7 +21,7 @@ export default class Engine {
 
     const attributes = {alpha}
 
-    console.log(canvas);
+    // console.log(canvas);
 
     if (webgl === 2) this.gl = canvas.getContext('webgl2' /*, attributes*/);
     this.isWebgl2 = !!this.gl;
@@ -29,7 +29,7 @@ export default class Engine {
     if (!this.gl) this.gl = canvas.getContext('webgl', /*attributes*/);
     if (!this.gl) console.error('webgl is not supported');
 
-    console.log(this.gl.getContextAttributes());
+    // console.log(this.gl.getContextAttributes());
 
   }
 }
