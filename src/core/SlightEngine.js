@@ -27,6 +27,6 @@ export default class Engine {
     if (!this.gl) this.gl = canvas.getContext('webgl', attributes);
     if (!this.gl) console.error('webgl is not supported');
 
-    
   }
+
 }
