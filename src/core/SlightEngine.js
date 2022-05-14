@@ -27,6 +27,19 @@ export default class Engine {
     if (!this.gl) this.gl = canvas.getContext('webgl', attributes);
     if (!this.gl) console.error('webgl is not supported');
 
+    this.state = {
+      blendFunc: {
+        src: this.gl.ONE,
+        dst: this.gl.ZERO
+      },
+      blendEquation: {
+        modeRGB: this.gl.FUNC_ADD
+      },
+      cullFace: null,
+      frontFace: this.gl.CCW,
+      depthMask: true,
+    }
+
   }
 
 }
