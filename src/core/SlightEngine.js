@@ -18,6 +18,10 @@ export default class Engine {
     xrCompatible = false
   } = {}) {
 
+    window.Slight = {
+      Engine: this
+    };
+
     const attributes = { alpha, antialias, depth, desynchronized, failIfMajorPerformanceCaveat, powerPreference, premultipliedAlpha, preserveDrawingBuffer, stencil, xrCompatible };
     
 
@@ -40,6 +44,31 @@ export default class Engine {
       depthMask: true,
     }
 
+    this.scene = {
+
+    }
+
+  }
+
+  scene(func) {
+
+  }
+
+  update(execute) {
+
+    let lastUpdate = Date.now();
+    let now, dt;
+
+    function renderLoop() {
+      now = Date.now();
+      dt = now - lastUpdate;
+      lastUpdate = now;
+
+      execute(this.scene, dt);
+      window.requestAnimationFrame(renderLoop);
+    }
+
+    window.requestAnimationFrame(renderLoop);
   }
 
 }
