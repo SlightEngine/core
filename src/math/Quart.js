@@ -1,6 +1,6 @@
 import * as QuatFunc from './functions/QuatFunc.js';
 
-export class Quat extends Array {
+export class Quart extends Array {
     constructor(x = 0, y = 0, z = 0, w = 1) {
         super(x, y, z, w);
         this.onChange = () => {};

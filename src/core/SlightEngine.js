@@ -1,5 +1,5 @@
 
-export default class Engine {
+export class Engine {
   constructor(canvas = document.createElement('canvas'), {
 
     fullScreen = true,

@@ -1,13 +1,13 @@
-import Engine from './core/SlightEngine.js';
+export { Engine } from './core/SlightEngine.js';
 
-import Vec3 from './math/Vec3.js';
+export { Vec2 } from './math/Vec2.js';
+export { Vec3 } from './math/Vec3.js';
+export { Vec4 } from './math/Vec4.js';
 
-export {
-  Engine,
-  Vec3
-}
+export { Mat3 } from './math/Mat3.js';
+export { Mat4 } from './math/Mat4.js';
 
-export default {
-  Engine: Engine,
-  Vec3: Vec3
-}
+export { Color } from './math/Color.js';
+
+export { Quart } from './math/Quart.js';
+export { Euler } from './math/Euler.js';
