@@ -1,4 +1,7 @@
 
+const Vec3Func = {
+  
+}
 
 export default class Vec3 {
   constructor(x = 0, y = x, z = x) {
