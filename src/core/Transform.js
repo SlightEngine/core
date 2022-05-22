@@ -1,5 +1,5 @@
 import { Vec3 } from '../math/Vec3.js';
-import { Quat } from '../math/Quat.js';
+import { Quart } from '../math/Quart.js';
 import { Mat4 } from '../math/Mat4.js';
 import { Euler } from '../math/Euler.js';
 
@@ -14,10 +14,10 @@ export class Transform {
     this.matrixAutoUpdate = true;
 
     this.position = new Vec3();
-    this.quaternion = new Quat();
-    this.scale = new Vec3(1);
+    this.quaternion = new Quart();
+    this.scale = Vec3.one();
     this.rotation = new Euler();
-    this.up = new Vec3(0, 1, 0);
+    this.up = Vec3.up();
 
     this.rotation.onChange = () => this.quaternion.fromEuler(this.rotation);
     this.quaternion.onChange = () => this.rotation.fromQuaternion(this.quaternion);

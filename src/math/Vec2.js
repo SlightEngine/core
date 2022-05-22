@@ -140,3 +140,13 @@ export class Vec2 extends Array {
         return a;
     }
 }
+
+// static
+Vec2.up = () => new Vec2(0, 1);
+Vec2.down = () => new Vec2(0, -1);
+Vec2.left = () => new Vec2(-1, 0);
+Vec2.right = () => new Vec2(1, 0);
+Vec2.zero = () => new Vec2(0, 0);
+Vec2.one = () => new Vec2(1, 1);
+Vec2.positiveInfinity = () => new Vec2(Infinity, Infinity);
+Vec2.negativeInfinity = () => new Vec2(-Infinity, -Infinity);

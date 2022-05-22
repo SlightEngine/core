@@ -1,4 +1,5 @@
 export { Engine } from './core/SlightEngine.js';
+export { Camera } from './core/Camera.js';
 
 export { Vec2 } from './math/Vec2.js';
 export { Vec3 } from './math/Vec3.js';

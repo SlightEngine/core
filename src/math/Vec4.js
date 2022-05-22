@@ -79,3 +79,9 @@ export class Vec4 extends Array {
         return a;
     }
 }
+
+// static
+Vec4.zero = () => new Vec4(0, 0, 0, 0);
+Vec4.one = () => new Vec4(1, 1, 1, 1);
+Vec4.positiveInfinity = () => new Vec4(Infinity, Infinity, Infinity, Infinity);
+Vec4.negativeInfinity = () => new Vec4(-Infinity, -Infinity, -Infinity, -Infinity);
