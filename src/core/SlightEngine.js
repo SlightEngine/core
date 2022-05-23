@@ -23,7 +23,7 @@ export class Engine {
     };
 
     const attributes = { alpha, antialias, depth, desynchronized, failIfMajorPerformanceCaveat, powerPreference, premultipliedAlpha, preserveDrawingBuffer, stencil, xrCompatible };
-    
+  
 
     if (webgl === 2) this.gl = canvas.getContext('webgl2', attributes);
     this.isWebgl2 = !!this.gl;
